@@ -15,14 +15,30 @@ export class PostService {
 
 
   getAll() {
+
     window.location.reload;
     return this.arrPost;
   }
 
   getByCategory(pCategory) {
-
   }
-  addPost() {
 
+  addPost() {
+    if (!localStorage.getItem('arrPost')) {
+      console.log('adioss');
+
+      localStorage.setItem('arrPost', JSON.stringify(this.arrPost))
+      this.arrPost.push(JSON.parse(localStorage.getItem('formulario')))
+      localStorage.setItem('arrPost', JSON.stringify(this.arrPost))
+
+    }
+    else {
+      console.log('hola');
+
+      this.arrPost = JSON.parse(localStorage.getItem('arrPost'))
+      this.arrPost.push(JSON.parse(localStorage.getItem('formulario')))
+      localStorage.setItem('arrPost', JSON.stringify(this.arrPost))
+
+    }
   }
 }

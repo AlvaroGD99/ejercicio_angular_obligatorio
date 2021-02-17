@@ -38,6 +38,8 @@ export class FormularioComponentComponent implements OnInit {
   }
 
   onSubmit() {
-
+    localStorage.setItem('formulario', JSON.stringify(this.formulario.value))
+    this.formulario.reset();
+    this.postService.addPost()
   }
 }
