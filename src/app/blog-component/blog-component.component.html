@@ -1,6 +1,13 @@
 <div class="container">
     <button class="btn btn-block btn-primary mt-3" routerLink='/new'>Añadir</button>
+    <select class="btn btn-block btn-primary mt-3" (change)='onChange($event)'>
+        <option value="todos">TODOS</option>
+        <option value="futbol">FUTBOL</option>
+        <option value="baloncesto">BALONCESTO</option>
+        <option value="rugby">RUGBY</option>
+        <option value="tenis">TENIS</option>
 
+    </select>
     <div class="posts mt-5">
         <div class="post" *ngFor='let post of posts'>
             <h1>{{post.titulo}}</h1>

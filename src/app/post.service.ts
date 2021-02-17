@@ -21,6 +21,7 @@ export class PostService {
   }
 
   getByCategory(pCategory) {
+    return this.arrPost.filter(post => post.categoria === pCategory)
   }
 
   addPost() {

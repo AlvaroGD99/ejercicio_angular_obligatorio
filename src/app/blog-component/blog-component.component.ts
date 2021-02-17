@@ -20,5 +20,11 @@ export class BlogComponentComponent implements OnInit {
 
 
 
-
+  onChange($event) {
+    if ($event.target.value === 'todos') {
+      this.posts = this.postServie.getAll()
+    } else {
+      this.posts = this.postServie.getByCategory($event.target.value)
+    }
+  }
 }
