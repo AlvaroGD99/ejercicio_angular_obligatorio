@@ -4,6 +4,7 @@ import { BlogComponentComponent } from './blog-component/blog-component.componen
 import { FormularioComponentComponent } from './formulario-component/formulario-component.component';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'new' },
   { path: 'blog', component: BlogComponentComponent },
   { path: 'new', component: FormularioComponentComponent }
 ];

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-blog-component',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponentComponent implements OnInit {
 
-  constructor() { }
+  reload: number
+  posts: any
+  constructor(private postServie: PostService) {
+    this.reload = 0;
+  }
 
   ngOnInit(): void {
+    this.posts = this.postServie.getAll();
   }
+
+
+
 
 }

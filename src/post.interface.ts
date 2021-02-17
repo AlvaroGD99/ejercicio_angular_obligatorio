@@ -6,5 +6,4 @@ export interface Post {
     imagen?: string;
     fecha?: string;
     categoria?: string
-
 }

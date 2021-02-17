@@ -1,0 +1,29 @@
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.post{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 200px;
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin: 5px;
+    text-transform: uppercase;
+    height: auto;
+    background-size: cover;
+    
+}
+
+.post h1{
+    font-size: 1.5em;
+}
+.post img{
+    width: 100%;
+}
+.post p{
+    text-align: center;
+    width: 100%;
+}
